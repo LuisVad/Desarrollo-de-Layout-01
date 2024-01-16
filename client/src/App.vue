@@ -1,5 +1,5 @@
 <script setup>
-
+import VueRouter from 'vue-router';
 </script>
 
 <template>
@@ -34,6 +34,7 @@
         </b-collapse>
       </b-navbar>
     </div>
+
     <div class="row mt-1">
       <div class="col-3">
         <div class="px-3 py-2">
@@ -43,6 +44,24 @@
             in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
           </p>
           <b-img src="https://img.freepik.com/foto-gratis/arbol-navidad-decorado-estrella_318354-1719.jpg?size=338&ext=jpg&ga=GA1.1.1880011253.1704931200&semt=sph" fluid thumbnail></b-img>
+        </div>
+        <div>
+          <b-nav vertical class="pt-5">
+    
+            <b-nav-item 
+              ><b-link :to="{ name: 'inicio' }">
+                Opcion 1
+                </b-link>
+            </b-nav-item>
+          
+            <b-nav-item 
+              ><b-link :to="{ name: 'home' }">Opcion 2</b-link>
+            </b-nav-item>
+          
+            <b-nav-item 
+              ><b-link :to="{ name: 'user' }">Opcion 3</b-link>
+            </b-nav-item>
+          </b-nav>  
         </div>
       </div>
       <div class="col-9">
@@ -88,6 +107,9 @@
               </b-card>
             </b-card-group>
           </div>
+        </div>
+        <div>
+          <router-view> </router-view>
         </div>
       </div>
     </div>
